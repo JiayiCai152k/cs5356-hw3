@@ -1,21 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function fetchDogImage() {
-        fetch("https://dog.ceo/api/breeds/image/random")
-            .then(response => response.json())
-            .then(data => {
-                const imageElement = document.getElementById("dog-image");
-                imageElement.src = data.message; // Use the correct URL
-                imageElement.alt = "Random Dog"; // Add alt text for accessibility
-            })
-            .catch(error => {
-                document.getElementById("dog-image").alt = "Failed to load dog image.";
-                console.error("Error fetching the dog image:", error);
-            });
+    function fetchRandomImage() {
+        const imageElement = document.getElementById("random-image");
+        const randomId = Math.floor(Math.random() * 1000); // Generate a random ID for different images
+        imageElement.src = `https://picsum.photos/400/300?random=${randomId}`;
+        imageElement.alt = "Random Image";
     }
 
-    // Fetch a dog image on page load
-    fetchDogImage();
+    // Fetch an image on page load
+    fetchRandomImage();
 
     // Add event listener to the button for fetching new images
-    document.getElementById("new-dog").addEventListener("click", fetchDogImage);
+    document.getElementById("new-image").addEventListener("click", fetchRandomImage);
 });
