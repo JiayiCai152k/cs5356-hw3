@@ -5,71 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <header>
         <h1>Welcome to My Personal Homepage</h1>
     </header>
 
-    <main id="main-container">
-        <!-- Left Column -->
-        <div id="left-column">
-            <section id="about">
-                <figure>
-                    <img src="images/code.jpeg" alt="Picture of Code" width="200">
-                </figure>
-                <article>
-                    <h2>About Me</h2>
-                    <p>Hi! I'm Jiayi, a Master's student in Computer Science. 
-                       I enjoy building software, exploring AI applications, and creating user-friendly experiences. 
-                       In my free time, I love drawing, singing, and traveling!</p>
-                </article>
-            </section>
+    <main>
+        <section>
+            <figure>
+                <img src="images/code.jpeg" alt="Picture of Code" width="200">
+            </figure>
+            <article>
+                <br>
+                <h2>About Me</h2>
+                <br>
+                <p>Hi! I'm Jiayi, a Master's student in Computer Science. 
+                   I enjoy building software, exploring AI applications, and creating user-friendly experiences. 
+                   In my free time, I love drawing, singing, and traveling!</p>
+            </article>
+        </section>
+        <details>
+            <summary>More About Me</summary>
+            <p>I'm passionate about distributed systems and mobile development.</p>
+            <p>I also play video games!</p>
+        </details>
 
-            <details>
-                <summary>More About Me</summary>
-                <p>I'm passionate about distributed systems and mobile development.</p>
-                <p>I also play video games!</p>
-            </details>
+        <section id="joke-section">
+            <h2>Random Joke</h2>
+            <p id="joke-text">Loading...</p>
+            <button id="new-joke">Get a New Joke</button>
+        </section>
+          
+        
 
-            <section id="joke-section">
-                <h2>Random Joke</h2>
-                <p id="joke-text">Loading...</p>
-                <button id="new-joke">Get a New Joke</button>
-            </section>
-        </div>
+        <!-- Homework Section Starts Here -->
+        <section id="homework">
+            <h2>Homework Answers</h2>
 
-        <!-- Right Column -->
-        <div id="right-column">
-            <section id="homework">
-                <h2>Homework Answers</h2>
-                <article>
-                    <h3>HTML Element Not Covered in Detail</h3>
-                    <p><strong>Q: What HTML element did I use that we haven't covered in detail?</strong></p>
-                    <p>A: I used the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements. These allow users to toggle additional content without needing JavaScript.</p>
-                    <p><strong>Q: What did I learn about its behavior?</strong></p>
-                    <p>A: By default, the content inside <code>&lt;details&gt;</code> is hidden until the user clicks on <code>&lt;summary&gt;</code>. This is useful for organizing extra information in a collapsible format.</p>
-                </article>
-                <article>
-                    <h3>CSS Property Not Covered in Detail</h3>
-                    <p><strong>Q: What CSS property did I use that we haven't covered in detail?</strong></p>
-                    <p>A: I used the <code>filter</code> property, which allows applying visual effects like blur, brightness, contrast, and grayscale.</p>
-                    <p><strong>Q: How did I use it?</strong></p>
-                    <p>A: I applied the <code>filter: grayscale(100%);</code> effect to my profile image when hovered over. This makes the image turn black & white smoothly. I also used <code>transition</code> to ensure a smooth visual effect.</p>
-                </article>
-                <article>
-                    <h3>API Integration</h3>
-                    <p><strong>Q: What API did I integrate into my website?</strong></p>
-                    <p>A: I used the <code>JokeAPI</code>, which provides random jokes in JSON format.</p>
-                </article>
-            </section>
-        </div>
+            <article>
+                <h3>HTML Element Not Covered in Detail</h3>
+                <br>
+                <p><strong>Q: What HTML element did I use that we haven't covered in detail?</strong></p>
+                <p>A: I used the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements. These allow users to toggle additional content without needing JavaScript.</p>
+
+                <p><strong>Q: What did I learn about its behavior?</strong></p>
+                <p>A: By default, the content inside <code>&lt;details&gt;</code> is hidden until the user clicks on <code>&lt;summary&gt;</code>. This is useful for organizing extra information in a collapsible format.</p>
+            </article>
+            <article>
+                <h3>CSS Property Not Covered in Detail</h3>
+                <br>
+                <p><strong>Q: What CSS property did I use that we haven't covered in detail?</strong></p>
+                <p>A: I used the <code>filter</code> property, which allows applying visual effects like blur, brightness, contrast, and grayscale.</p>
+        
+                <p><strong>Q: How did I use it?</strong></p>
+                <p>A: I applied the <code>filter: grayscale(100%);</code> effect to my profile image when hovered over. This makes the image turn black & white smoothly. I also used <code>transition</code> to ensure a smooth visual effect.</p>
+            </article>
+            <article>
+                <h3>API Integration</h3>
+                <br>
+                <p><strong>Q: What API did I integrate into my website?</strong></p>
+                <p>A: I used the <code>JokeAPI</code>, which provides random jokes in JSON format.</p>
+            </article>
+            
+                
+        </section>
+        <!-- Homework Section Ends Here -->
     </main>
 
     <footer>
         <p>© 2025 Jiayi | <a href="https://github.com/JiayiCai152k">GitHub</a></p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
