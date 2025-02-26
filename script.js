@@ -1,34 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function fetchArtworkImage() {
-        fetch("https://api.artic.edu/api/v1/artworks/search?q=cats")
+    function fetchJoke() {
+        fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
             .then(response => response.json())
             .then(data => {
-                const artwork = data.data[0]; // Get the first artwork from the results
-                const imageElement = document.getElementById("artwork-image");
-                const titleElement = document.getElementById("artwork-title");
+                const jokeElement = document.getElementById("joke-text");
 
-                if (artwork && artwork.id) {
-                    // Construct image URL using the Art Institute of Chicago's IIIF system
-                    const imageId = artwork.id;
-                    const imageUrl = `https://www.artic.edu/iiif/2/${imageId}/full/400,/0/default.jpg`;
-
-                    imageElement.src = imageUrl;
-                    imageElement.alt = artwork.title;
-                    titleElement.textContent = `"${artwork.title}"`;
+                if (data.type === "single") {
+                    jokeElement.textContent = data.joke; // Display single-line jokes
+                } else if (data.type === "twopart") {
+                    jokeElement.innerHTML = `<p>${data.setup}</p><p><strong>${data.delivery}</strong></p>`; // Display two-part jokes
                 } else {
-                    titleElement.textContent = "No artwork found.";
-                    imageElement.alt = "No image available.";
+                    jokeElement.textContent = "Couldn't load a joke.";
                 }
             })
             .catch(error => {
-                document.getElementById("artwork-title").textContent = "Failed to load artwork.";
-                console.error("Error fetching the artwork:", error);
+                document.getElementById("joke-text").textContent = "Failed to load joke.";
+                console.error("Error fetching the joke:", error);
             });
     }
 
-    // Fetch an artwork image on page load
-    fetchArtworkImage();
+    // Fetch a joke on page load
+    fetchJoke();
 
-    // Add event listener to the button for fetching new images
-    document.getElementById("new-artwork").addEventListener("click", fetchArtworkImage);
+    // Add event listener to the button for fetching new jokes
+    document.getElementById("new-joke").addEventListener("click", fetchJoke);
 });

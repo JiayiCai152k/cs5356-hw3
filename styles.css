@@ -240,3 +240,32 @@ figure img:hover {
 #new-artwork:hover {
     background: #005bb5;
 }
+
+
+#joke-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+}
+
+#joke-text {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+#new-joke {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-joke:hover {
+    background: #005bb5;
+}
