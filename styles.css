@@ -260,7 +260,7 @@ figure img:hover {
 #new-joke {
     padding: 10px 15px;
     font-size: 1rem;
-    background: #0073e6;
+    background: #765a8b;
     color: white;
     border: none;
     border-radius: 5px;
@@ -268,7 +268,7 @@ figure img:hover {
 }
 
 #new-joke:hover {
-    background: #005bb5;
+    background: #140b3b;
 }
 
 
