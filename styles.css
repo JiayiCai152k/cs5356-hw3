@@ -271,6 +271,11 @@ figure img:hover {
     background: #140b3b;
 }
 
+h3 {
+    color: #382a73;
+    font-style: italic;
+}
+
 
 #main-container {
     display: flex;
