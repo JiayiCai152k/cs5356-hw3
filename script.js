@@ -3,9 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch("https://dog.ceo/api/breeds/image/random")
             .then(response => response.json())
             .then(data => {
-                document.getElementById("dog-image").src = data.message;
+                const imageElement = document.getElementById("dog-image");
+                imageElement.src = data.message; // Use the correct URL
+                imageElement.alt = "Random Dog"; // Add alt text for accessibility
             })
             .catch(error => {
+                document.getElementById("dog-image").alt = "Failed to load dog image.";
                 console.error("Error fetching the dog image:", error);
             });
     }
@@ -16,4 +19,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add event listener to the button for fetching new images
     document.getElementById("new-dog").addEventListener("click", fetchDogImage);
 });
-
