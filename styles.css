@@ -112,3 +112,14 @@ details p {
 #homework p {
     margin-bottom: 10px;
 }
+
+/* Apply a filter effect to the profile image */
+figure img {
+    transition: filter 0.5s ease-in-out;
+}
+
+/* When hovered, the image turns grayscale */
+figure img:hover {
+    filter: grayscale(100%);
+}
+
